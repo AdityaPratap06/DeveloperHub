@@ -7,7 +7,7 @@ const footerLinks = [
   { href: "/privacy", label: "Privacy Policy" },
   { href: "/terms", label: "Terms" },
   { href: "/contact", label: "Contact" },
-  { href: "/sitemap", label: "Sitemap" },
+  { href: "/site-map", label: "Sitemap" },
 ];
 
 export function Footer() {

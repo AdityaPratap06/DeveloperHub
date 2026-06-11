@@ -3,7 +3,7 @@ import { SITE_URL } from "@/lib/site";
 import { TOOLS } from "@/lib/tools";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticPages = ["", "/about", "/privacy", "/terms", "/contact", "/sitemap"];
+  const staticPages = ["", "/about", "/privacy", "/terms", "/contact", "/site-map"];
 
   const staticEntries: MetadataRoute.Sitemap = staticPages.map((path) => ({
     url: `${SITE_URL}${path}`,

@@ -5,7 +5,7 @@ import { TOOLS } from "@/lib/tools";
 export const metadata = createMetadata({
   title: "Sitemap",
   description: "Complete sitemap of all DevToolkit pages and developer tools.",
-  path: "/sitemap",
+  path: "/site-map",
 });
 
 const staticPages = [
