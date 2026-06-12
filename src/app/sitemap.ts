@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { SITE_URL } from "@/lib/site";
-import { TOOLS } from "@/lib/tools";
+import { CATEGORY_LABELS, TOOLS, type ToolCategory } from "@/lib/tools";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages = ["", "/about", "/privacy", "/terms", "/contact", "/site-map"];
@@ -12,12 +12,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: path === "" ? 1 : 0.5,
   }));
 
+  const categoryEntries: MetadataRoute.Sitemap = (
+    Object.keys(CATEGORY_LABELS) as ToolCategory[]
+  ).map((category) => ({
+    url: `${SITE_URL}/categories/${category}`,
+    lastModified: new Date(),
+    changeFrequency: "weekly" as const,
+    priority: 0.7,
+  }));
+
   const toolEntries: MetadataRoute.Sitemap = TOOLS.map((tool) => ({
     url: `${SITE_URL}${tool.href}`,
     lastModified: new Date(),
-    changeFrequency: "monthly",
+    changeFrequency: "monthly" as const,
     priority: 0.8,
   }));
 
-  return [...staticEntries, ...toolEntries];
+  return [...staticEntries, ...categoryEntries, ...toolEntries];
 }

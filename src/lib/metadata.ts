@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { SITE_NAME, SITE_URL, SITE_DESCRIPTION } from "./site";
+import { SITE_NAME, SITE_URL, SITE_DESCRIPTION, SITE_KEYWORDS } from "./site";
+import { getToolSeoContent } from "./tool-content";
 
 interface PageMetadataOptions {
   title: string;
@@ -15,12 +16,15 @@ export function createMetadata({
   keywords = [],
 }: PageMetadataOptions): Metadata {
   const url = `${SITE_URL}${path}`;
-  const fullTitle = path === "/" ? `${SITE_NAME} — Free Developer Tools` : `${title} | ${SITE_NAME}`;
+  const fullTitle =
+    path === "/"
+      ? `${SITE_NAME} — ${title}`
+      : `${title} | ${SITE_NAME}`;
 
   return {
     title: fullTitle,
     description,
-    keywords: [...keywords, "developer tools", "online tools", SITE_NAME.toLowerCase()],
+    keywords: [...keywords, ...SITE_KEYWORDS],
     alternates: {
       canonical: url,
     },
@@ -40,13 +44,28 @@ export function createMetadata({
     robots: {
       index: true,
       follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
     },
   };
 }
 
-export function createToolMetadata(toolId: string, title: string, description: string, keywords: string[]): Metadata {
+export function createToolMetadata(
+  toolId: string,
+  title: string,
+  fallbackDescription: string,
+  keywords: string[]
+): Metadata {
+  const seoContent = getToolSeoContent(toolId);
+  const description = seoContent?.metaDescription ?? fallbackDescription;
+
   return createMetadata({
-    title,
+    title: `${title} — Free Online Tool`,
     description,
     path: `/tools/${toolId}`,
     keywords,
@@ -54,8 +73,28 @@ export function createToolMetadata(toolId: string, title: string, description: s
 }
 
 export const homeMetadata = createMetadata({
-  title: SITE_NAME,
+  title: "Free Online Developer Tools",
   description: SITE_DESCRIPTION,
   path: "/",
-  keywords: ["json formatter", "jwt decoder", "base64", "uuid generator", "regex tester"],
+  keywords: [
+    "json formatter online free",
+    "jwt decoder online",
+    "base64 encode decode",
+    "uuid generator v4",
+    "regex tester online",
+    "developer tools hub",
+  ],
 });
+
+export function createCategoryMetadata(
+  category: string,
+  title: string,
+  description: string
+): Metadata {
+  return createMetadata({
+    title,
+    description,
+    path: `/categories/${category}`,
+    keywords: [category, "developer tools", "free online tools"],
+  });
+}

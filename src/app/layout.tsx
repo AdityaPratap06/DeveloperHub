@@ -5,6 +5,7 @@ import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { GoogleAnalytics } from "@/components/analytics/google-analytics";
 import { homeMetadata } from "@/lib/metadata";
+import { SITE_URL } from "@/lib/site";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -17,7 +18,10 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = homeMetadata;
+export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
+  ...homeMetadata,
+};
 
 export default function RootLayout({
   children,
