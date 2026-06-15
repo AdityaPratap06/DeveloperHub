@@ -1,9 +1,10 @@
 import type { MetadataRoute } from "next";
+import { getAllBlogPosts } from "@/lib/blog";
 import { SITE_URL } from "@/lib/site";
 import { CATEGORY_LABELS, TOOLS, type ToolCategory } from "@/lib/tools";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticPages = ["", "/about", "/privacy", "/terms", "/contact", "/site-map"];
+  const staticPages = ["", "/about", "/privacy", "/terms", "/contact", "/site-map", "/blog"];
 
   const staticEntries: MetadataRoute.Sitemap = staticPages.map((path) => ({
     url: `${SITE_URL}${path}`,
@@ -28,5 +29,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  return [...staticEntries, ...categoryEntries, ...toolEntries];
+  const blogEntries: MetadataRoute.Sitemap = getAllBlogPosts().map((post) => ({
+    url: `${SITE_URL}/blog/${post.slug}`,
+    lastModified: new Date(post.updatedAt ?? post.publishedAt),
+    changeFrequency: "monthly" as const,
+    priority: post.funnel === "bottom" ? 0.9 : 0.75,
+  }));
+
+  return [...staticEntries, ...categoryEntries, ...toolEntries, ...blogEntries];
 }

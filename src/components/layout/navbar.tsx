@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Wrench } from "lucide-react";
+import { Wrench, BookOpen } from "lucide-react";
 import { SITE_NAME } from "@/lib/site";
 import { ThemeToggle } from "./theme-toggle";
 import { ToolSearch } from "./tool-search";
@@ -14,6 +14,16 @@ export function Navbar() {
           <Wrench className="h-5 w-5" />
           <span className="hidden sm:inline">{SITE_NAME}</span>
         </Link>
+
+        {/* <nav className="hidden md:flex items-center gap-1">
+          <Link
+            href="/blog"
+            className="flex items-center gap-1.5 rounded-md px-3 py-1.5 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
+          >
+            <BookOpen className="h-4 w-4" />
+            Blog
+          </Link>
+        </nav> */}
 
         <div className="flex-1 max-w-md mx-auto">
           <ToolSearch placeholder="Search tools..." />

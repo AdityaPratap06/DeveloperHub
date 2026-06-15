@@ -1,15 +1,17 @@
 import Link from "next/link";
 import { createMetadata } from "@/lib/metadata";
+import { getAllBlogPosts } from "@/lib/blog";
 import { CATEGORY_LABELS, TOOLS, type ToolCategory } from "@/lib/tools";
 
 export const metadata = createMetadata({
   title: "Sitemap",
-  description: "Complete sitemap of all DevToolkit pages, categories, and developer tools.",
+  description: "Complete sitemap of all DevToolkit pages, categories, blog articles, and developer tools.",
   path: "/site-map",
 });
 
 const staticPages = [
   { href: "/", label: "Home" },
+  { href: "/blog", label: "Blog" },
   { href: "/about", label: "About" },
   { href: "/privacy", label: "Privacy Policy" },
   { href: "/terms", label: "Terms of Service" },
@@ -43,6 +45,19 @@ export default function SitemapPage() {
             <li key={cat}>
               <Link href={`/categories/${cat}`} className="text-muted-foreground hover:text-foreground">
                 {CATEGORY_LABELS[cat]}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section className="mb-8">
+        <h2 className="text-lg font-semibold mb-4">Blog Articles</h2>
+        <ul className="space-y-2">
+          {getAllBlogPosts().map((post) => (
+            <li key={post.slug}>
+              <Link href={`/blog/${post.slug}`} className="text-muted-foreground hover:text-foreground">
+                {post.title}
               </Link>
             </li>
           ))}

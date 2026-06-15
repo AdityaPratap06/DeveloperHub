@@ -125,6 +125,23 @@ export function HomepageSeoContent() {
           <FaqSection faqs={HOMEPAGE_FAQ} title="Frequently Asked Questions" />
         </div>
       </section>
+
+      {/* Blog CTA */}
+      <section className="container mx-auto px-4 pb-16">
+        <div className="mx-auto max-w-3xl rounded-2xl border bg-gradient-to-br from-primary/5 to-muted/30 p-8 sm:p-10 text-center">
+          <h2 className="text-2xl font-bold">Developer Guides & Tutorials</h2>
+          <p className="mt-3 text-muted-foreground leading-relaxed">
+            Learn JSON, JWT, Base64, and more with our free guides. Step-by-step tutorials
+            that link directly to the tools you need.
+          </p>
+          <Link
+            href="/blog"
+            className="mt-5 inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline"
+          >
+            Read the blog →
+          </Link>
+        </div>
+      </section>
     </>
   );
 }

@@ -9,6 +9,7 @@ import {
 } from "@/lib/tools";
 
 const footerLinks = [
+  { href: "/blog", label: "Blog" },
   { href: "/about", label: "About" },
   { href: "/privacy", label: "Privacy Policy" },
   { href: "/terms", label: "Terms of Service" },
