@@ -28,6 +28,9 @@ export function createMetadata({
     alternates: {
       canonical: url,
     },
+    other: {
+      "google-adsense-account": "ca-pub-1025324546614550",
+    },
     openGraph: {
       title: fullTitle,
       description,

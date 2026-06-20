@@ -1,4 +1,7 @@
+"use client";
+
 import { cn } from "@/lib/utils";
+import { useEffect } from "react";
 
 export type AdPlacementType = "hero" | "sidebar" | "content" | "footer";
 
@@ -16,27 +19,42 @@ const placementStyles: Record<AdPlacementType, string> = {
   footer: "w-full max-w-5xl mx-auto h-[90px] mt-8",
 };
 
-const placementLabels: Record<AdPlacementType, string> = {
-  hero: "Advertisement — Below Hero",
-  sidebar: "Advertisement — Sidebar",
-  content: "Advertisement — Between Content",
-  footer: "Advertisement — Footer",
-};
+declare global {
+  interface Window {
+    adsbygoogle: Array<Record<string, unknown>>;
+  }
+}
 
 export function AdPlacement({ type, className }: AdPlacementProps) {
+  useEffect(() => {
+    try {
+      window.adsbygoogle = window.adsbygoogle || [];
+      window.adsbygoogle.push({});
+    } catch (err) {
+      console.error("AdSense error:", err);
+    }
+  }, []);
+
   if (!ADS_ENABLED) return null;
 
   return (
-    <div
-      className={cn(
-        "flex items-center justify-center rounded-lg border border-dashed border-muted-foreground/30 bg-muted/20 text-xs text-muted-foreground",
-        placementStyles[type],
-        className
-      )}
-      data-ad-placement={type}
-      aria-label={placementLabels[type]}
-    >
-      {placementLabels[type]}
+    <div className={cn(placementStyles[type], className)}>
+      <ins
+        className="adsbygoogle"
+        style={{ display: "block" }}
+        data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+        data-ad-slot={
+          type === "hero"
+            ? "1111111111"
+            : type === "sidebar"
+              ? "2222222222"
+              : type === "content"
+                ? "3333333333"
+                : "4444444444"
+        }
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+      />
     </div>
   );
 }

@@ -7,6 +7,7 @@ import { GoogleAnalytics } from "@/components/analytics/google-analytics";
 import { homeMetadata } from "@/lib/metadata";
 import { SITE_URL } from "@/lib/site";
 import "./globals.css";
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -43,6 +44,7 @@ export default function RootLayout({
         </ThemeProvider>
         <GoogleAnalytics />
       </body>
+      <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1025324546614550" strategy="afterInteractive" crossOrigin="anonymous" />
     </html>
   );
 }
