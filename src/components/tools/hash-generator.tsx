@@ -9,7 +9,7 @@ import { CopyButton } from "@/components/shared/copy-button";
 const ALGORITHMS = ["MD5", "SHA1", "SHA256", "SHA512"] as const;
 
 export function HashGeneratorTool() {
-  const [input, setInput] = useState("DevToolkit");
+  const [input, setInput] = useState("DevToolsKit");
   const [hashes, setHashes] = useState<Record<string, string>>({});
 
   useEffect(() => {

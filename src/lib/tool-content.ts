@@ -19,7 +19,7 @@ export const TOOL_SEO_CONTENT: Record<string, ToolSeoContent> = {
       "Free online JSON formatter and beautifier. Format, minify, and prettify JSON instantly in your browser. Syntax highlighting, copy & download — no signup required.",
     overview: [
       "JSON formatter — Our free tool enables developers to quickly format, beautify and minify JSON data. From debugging API responses, formatting config files to preparing data for documentation and more, this tool is quick an easy way of handling JSON.",
-      "Unlike desktop apps or CLI tools, DevToolkit runs entirely in your browser. Your JSON data never leaves your device — making it safe for sensitive API keys, user data, and production configs.",
+      "Unlike desktop apps or CLI tools, DevToolsKit runs entirely in your browser. Your JSON data never leaves your device — making it safe for sensitive API keys, user data, and production configs.",
       "Paste raw JSON, click Format to beautify with proper indentation, or Minify to compress for production. Copy the output or download as a .json file with one click.",
     ],
     features: [
@@ -45,7 +45,7 @@ export const TOOL_SEO_CONTENT: Record<string, ToolSeoContent> = {
     faq: [
       {
         question: "Is this JSON formatter free to use?",
-        answer: "Yes, DevToolkit JSON Formatter is completely free with no limits, no signup, and no watermarks.",
+        answer: "Yes, DevToolsKit JSON Formatter is completely free with no limits, no signup, and no watermarks.",
       },
       {
         question: "Does my JSON data get sent to a server?",
@@ -619,33 +619,33 @@ export function getToolSeoContent(toolId: string): ToolSeoContent | undefined {
 
 export const HOMEPAGE_FAQ: ToolFaq[] = [
   {
-    question: "Are DevToolkit developer tools actually FREE?",
+    question: "Are DevToolsKit developer tools actually FREE?",
     answer:
-      "Yes, you can use all 20+ tools on DevToolkit for free, with unlimited usage without signup and any hidden fees. Our Vision is that all developer utilities should be available for everyone!",
+      "Yes, you can use all 20+ tools on DevToolsKit for free, with unlimited usage without signup and any hidden fees. Our Vision is that all developer utilities should be available for everyone!",
   },
   {
     question: "Can I trust using these tools with my data?",
     answer:
-      "Absolutely. All the tools run entirely in your browser using JavaScript. None of your input data is sent to our servers or to third parties. This makes DevToolkit safe for sensitive data like API keys, JWT tokens, and passwords.",
+      "Absolutely. All the tools run entirely in your browser using JavaScript. None of your input data is sent to our servers or to third parties. This makes DevToolsKit safe for sensitive data like API keys, JWT tokens, and passwords.",
   },
   {
     question: "Do I need to create an account?",
     answer: "No account is needed. Simply choose any tool page, and you can start using it. Your preference for a theme and an ordinary list of recently used tools are stored in the local storage of your browser.",
   },
   {
-    question: "What tools are available on DevToolkit?",
+    question: "What tools are available on DevToolsKit?",
     answer:
-      "DevToolkit offers 20 developer tools including JSON Formatter, JSON Validator, JWT Decoder, Base64 Encoder, URL Encoder, UUID Generator, Unix Timestamp Converter, Regex Tester, Password Generator, Hash Generator, SQL/HTML/CSS/JS Formatters, Cron Generator, Color Converter, Lorem Ipsum Generator, Text Diff Checker, Case Converter, and QR Code Generator.",
+      "DevToolsKit offers 20 developer tools including JSON Formatter, JSON Validator, JWT Decoder, Base64 Encoder, URL Encoder, UUID Generator, Unix Timestamp Converter, Regex Tester, Password Generator, Hash Generator, SQL/HTML/CSS/JS Formatters, Cron Generator, Color Converter, Lorem Ipsum Generator, Text Diff Checker, Case Converter, and QR Code Generator.",
   },
   {
-    question: "Can I use DevToolkit on mobile?",
+    question: "Can I use DevToolsKit on mobile?",
     answer:
-      "DevToolkit is responsive, and works on phones, tablets, and desktops — YES. Every tool is designed for touch and small screens.",
+      "DevToolsKit is responsive, and works on phones, tablets, and desktops — YES. Every tool is designed for touch and small screens.",
   },
   {
-    question: "How is DevToolkit different from other developer tool websites?",
+    question: "How is DevToolsKit different from other developer tool websites?",
     answer:
-      "DevToolkit cares about privacy (everything is done on the client-side,), no server round-trips, and simplicity (no ads disrupting your workflow till you decide). All tools loads fast, and all works offline as soon as the page gets cached.",
+      "DevToolsKit cares about privacy (everything is done on the client-side,), no server round-trips, and simplicity (no ads disrupting your workflow till you decide). All tools loads fast, and all works offline as soon as the page gets cached.",
   },
 ];
 

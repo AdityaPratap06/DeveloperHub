@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useState } from "react";
 
-const STORAGE_KEY = "devtoolkit-recent-tools";
+const STORAGE_KEY = "devtoolskit-recent-tools";
 const MAX_RECENT = 6;
 
 export function useRecentTools() {

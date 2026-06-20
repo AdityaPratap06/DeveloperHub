@@ -59,7 +59,7 @@ export const howToFormatJson: BlogPost = {
       ordered: true,
       items: [
         "Copy your raw JSON from API response, log file, or config",
-        "Open the DevToolkit JSON Formatter",
+        "Open the DevToolsKit JSON Formatter",
         "Paste JSON into the input field",
         "Click \"Format\" to beautify with 2-space indentation",
         "Copy the formatted output or download as a .json file",
@@ -251,7 +251,7 @@ export const howToGeneratePasswords: BlogPost = {
       type: "list",
       ordered: true,
       items: [
-        "Open the DevToolkit Password Generator",
+        "Open the DevToolsKit Password Generator",
         "Set length to at least 16 characters",
         "Enable all character types (uppercase, lowercase, numbers, symbols)",
         "Click Generate — uses crypto.getRandomValues() for secure randomness",

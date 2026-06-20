@@ -6,7 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { ToolActions } from "@/components/shared/tool-actions";
 
 export function Base64EncoderTool() {
-  const [encodeInput, setEncodeInput] = useState("Hello, DevToolkit!");
+  const [encodeInput, setEncodeInput] = useState("Hello, DevToolsKit!");
   const [decodeInput, setDecodeInput] = useState("");
   const [encodeOutput, setEncodeOutput] = useState("");
   const [decodeOutput, setDecodeOutput] = useState("");

@@ -2,7 +2,7 @@ import { createMetadata } from "@/lib/metadata";
 
 export const metadata = createMetadata({
   title: "Contact",
-  description: "Get in touch with the DevToolkit team for feedback, suggestions, or support.",
+  description: "Get in touch with the DevToolsKit team for feedback, suggestions, or support.",
   path: "/contact",
 });
 
@@ -13,13 +13,13 @@ export default function ContactPage() {
       <div className="space-y-4 text-muted-foreground">
         <p>
           We&apos;d love to hear from you! Whether you have feedback, feature requests,
-          bug reports, or general questions about DevToolkit, feel free to reach out.
+          bug reports, or general questions about DevToolsKit, feel free to reach out.
         </p>
         <div className="rounded-lg border p-6 mt-8">
           <h2 className="text-lg font-semibold text-foreground mb-2">Email</h2>
           <p>
-            <a href="mailto:hello@devtoolkit.dev" className="text-foreground underline">
-              hello@devtoolkit.dev
+            <a href="mailto:info@bioconvert.in" className="text-foreground underline">
+              info@bioconvert.in
             </a>
           </p>
         </div>

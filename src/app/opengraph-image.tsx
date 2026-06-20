@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "DevToolkit — Free Online Developer Tools";
+export const alt = "DevToolsKit — Free Online Developer Tools";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -43,7 +43,7 @@ export default function Image() {
             🔧
           </div>
           <span style={{ fontSize: "48px", fontWeight: 700, color: "#fafafa" }}>
-            DevToolkit
+            DevToolsKit
           </span>
         </div>
         <p style={{ fontSize: "28px", color: "#a1a1aa", margin: 0 }}>

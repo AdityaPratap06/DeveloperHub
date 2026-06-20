@@ -5,7 +5,7 @@ import { CATEGORY_LABELS, TOOLS, type ToolCategory } from "@/lib/tools";
 
 export const metadata = createMetadata({
   title: "Sitemap",
-  description: "Complete sitemap of all DevToolkit pages, categories, blog articles, and developer tools.",
+  description: "Complete sitemap of all DevToolsKit pages, categories, blog articles, and developer tools.",
   path: "/site-map",
 });
 

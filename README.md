@@ -1,4 +1,4 @@
-# DevToolkit
+# DevToolsKit
 
 A fast, SEO-friendly developer tools hub built with Next.js 15, TypeScript, and Tailwind CSS. All tools run entirely in the browser — no API dependency, no data sent to servers.
 
@@ -58,7 +58,7 @@ npm start
 
 | Variable | Description | Default |
 |----------|-------------|---------|
-| `NEXT_PUBLIC_SITE_URL` | Canonical site URL for SEO | `https://devtoolkit.dev` |
+| `NEXT_PUBLIC_SITE_URL` | Canonical site URL for SEO | `https://www.devtoolskit.in/` |
 | `NEXT_PUBLIC_GA_MEASUREMENT_ID` | Google Analytics ID | (empty) |
 | `NEXT_PUBLIC_ADS_ENABLED` | Enable ad placement components | `false` |
 

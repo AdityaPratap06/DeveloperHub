@@ -2,7 +2,7 @@ import { createMetadata } from "@/lib/metadata";
 
 export const metadata = createMetadata({
   title: "Privacy Policy",
-  description: "DevToolkit privacy policy. All tools run in your browser — we do not collect or store your data.",
+  description: "DevToolsKit privacy policy. All tools run in your browser — we do not collect or store your data.",
   path: "/privacy",
 });
 
@@ -13,13 +13,13 @@ export default function PrivacyPage() {
       <div className="space-y-4 text-muted-foreground">
         <p>Last updated: June 11, 2026</p>
         <p>
-          DevToolkit is committed to protecting your privacy. All developer tools on this website
+          DevToolsKit is committed to protecting your privacy. All developer tools on this website
           run entirely in your web browser. We do not collect, store, or transmit any data you
           enter into our tools.
         </p>
         <h2 className="text-xl font-semibold text-foreground mt-8">Data Processing</h2>
         <p>
-          When you use any tool on DevToolkit, all processing happens locally on your device.
+          When you use any tool on DevToolsKit, all processing happens locally on your device.
           No input data is sent to our servers or any third-party API.
         </p>
         <h2 className="text-xl font-semibold text-foreground mt-8">Local Storage</h2>

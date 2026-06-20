@@ -12,7 +12,7 @@ export const bestJsonFormatter: BlogPost = {
   relatedPostSlugs: ["what-is-json", "how-to-format-json"],
   readTimeMinutes: 4,
   intro:
-    "Need a reliable JSON formatter that works instantly without signup? We built DevToolkit's JSON Formatter to be the fastest, most private option — format, minify, highlight, copy, and download JSON entirely in your browser.",
+    "Need a reliable JSON formatter that works instantly without signup? We built DevToolsKit's JSON Formatter to be the fastest, most private option — format, minify, highlight, copy, and download JSON entirely in your browser.",
   blocks: [
     { type: "heading", level: 2, text: "What to Look for in a JSON Formatter" },
     {
@@ -27,7 +27,7 @@ export const bestJsonFormatter: BlogPost = {
         "Fast — no server round-trips, instant results",
       ],
     },
-    { type: "heading", level: 2, text: "DevToolkit JSON Formatter Features" },
+    { type: "heading", level: 2, text: "DevToolsKit JSON Formatter Features" },
     {
       type: "list",
       items: [
@@ -52,7 +52,7 @@ export const bestJsonFormatter: BlogPost = {
     {
       type: "paragraph",
       content:
-        "Many JSON formatters send your data to their servers for processing. That's a privacy risk when formatting API responses with keys, user data, or production configs. DevToolkit processes everything locally — your JSON never leaves your device.",
+        "Many JSON formatters send your data to their servers for processing. That's a privacy risk when formatting API responses with keys, user data, or production configs. DevToolsKit processes everything locally — your JSON never leaves your device.",
     },
     { type: "heading", level: 2, text: "Also Validate Your JSON" },
     {
@@ -69,7 +69,7 @@ export const bestJsonFormatter: BlogPost = {
   ],
   faq: [
     {
-      question: "Is DevToolkit JSON Formatter really free?",
+      question: "Is DevToolsKit JSON Formatter really free?",
       answer: "Yes, completely free with no usage limits, no watermarks, and no account required.",
     },
     {
@@ -91,7 +91,7 @@ export const freeJwtDecoder: BlogPost = {
   relatedPostSlugs: ["what-is-jwt", "how-to-validate-jwt-tokens"],
   readTimeMinutes: 4,
   intro:
-    "Need to inspect a JWT token quickly? DevToolkit's free JWT Decoder shows you the header, payload, and expiration status instantly — with zero data sent to any server.",
+    "Need to inspect a JWT token quickly? DevToolsKit's free JWT Decoder shows you the header, payload, and expiration status instantly — with zero data sent to any server.",
   blocks: [
     { type: "heading", level: 2, text: "Why Use an Online JWT Decoder?" },
     {
@@ -104,7 +104,7 @@ export const freeJwtDecoder: BlogPost = {
         "Verify token format without writing code",
       ],
     },
-    { type: "heading", level: 2, text: "DevToolkit JWT Decoder Features" },
+    { type: "heading", level: 2, text: "DevToolsKit JWT Decoder Features" },
     {
       type: "list",
       items: [
@@ -143,7 +143,7 @@ export const freeJwtDecoder: BlogPost = {
   faq: [
     {
       question: "Is it safe to paste JWT tokens online?",
-      answer: "DevToolkit processes tokens only in your browser — nothing is sent to a server. Avoid pasting production tokens on shared computers.",
+      answer: "DevToolsKit processes tokens only in your browser — nothing is sent to a server. Avoid pasting production tokens on shared computers.",
     },
     {
       question: "Does this verify JWT signatures?",
@@ -163,7 +163,7 @@ export const onlineUuidGenerator: BlogPost = {
   relatedToolIds: ["uuid-generator", "password-generator"],
   readTimeMinutes: 3,
   intro:
-    "Need unique identifiers for your database, API, or application? DevToolkit's UUID Generator creates cryptographically secure UUID v4 values instantly — generate one or a hundred at a time.",
+    "Need unique identifiers for your database, API, or application? DevToolsKit's UUID Generator creates cryptographically secure UUID v4 values instantly — generate one or a hundred at a time.",
   blocks: [
     { type: "heading", level: 2, text: "What Is a UUID?" },
     {
@@ -171,7 +171,7 @@ export const onlineUuidGenerator: BlogPost = {
       content:
         "A UUID (Universally Unique Identifier) is a 128-bit value used as a unique ID across systems. UUID v4 uses random numbers, making collisions virtually impossible. Format: 550e8400-e29b-41d4-a716-446655440000.",
     },
-    { type: "heading", level: 2, text: "DevToolkit UUID Generator Features" },
+    { type: "heading", level: 2, text: "DevToolsKit UUID Generator Features" },
     {
       type: "list",
       items: [

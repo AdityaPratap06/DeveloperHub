@@ -42,7 +42,7 @@ export function ToolSearch({
       <div className="relative">
         <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
         <Input
-          type="search"
+          type="text"
           placeholder={placeholder}
           value={query}
           autoFocus={autoFocus}
@@ -88,7 +88,7 @@ export function ToolSearch({
                   >
                     <tool.icon className="mt-0.5 h-4 w-4 shrink-0 text-muted-foreground" />
                     <div>
-                      <p className="text-sm font-medium">{tool.name}</p>
+                      <p className="text-sm font-medium text-left">{tool.name}</p>
                       <p className="text-xs text-muted-foreground line-clamp-1">
                         {tool.description}
                       </p>

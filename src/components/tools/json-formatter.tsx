@@ -8,7 +8,7 @@ import { ToolActions } from "@/components/shared/tool-actions";
 import { formatJson, minifyJson } from "@/lib/json-utils";
 
 export function JsonFormatterTool() {
-  const [input, setInput] = useState('{"name":"DevToolkit","tools":20,"free":true}');
+  const [input, setInput] = useState('{"name":"DevToolsKit","tools":20,"free":true}');
   const [output, setOutput] = useState("");
   const [error, setError] = useState("");
 

@@ -15,7 +15,8 @@ export function Navbar() {
             alt="DevToolsKit"
             width={100}
             height={20}
-            className="dark:hidden h-5 w-auto"
+            className="dark:hidden h-4 sm:h-5 md:h-5 w-auto"
+            priority
           />
 
           <Image
@@ -23,7 +24,8 @@ export function Navbar() {
             alt="DevToolsKit"
             width={100}
             height={20}
-            className="hidden dark:block h-5 w-auto"
+            className="hidden dark:block h-4 sm:h-5 md:h-5 w-auto"
+            priority
           />
         </Link>
 
