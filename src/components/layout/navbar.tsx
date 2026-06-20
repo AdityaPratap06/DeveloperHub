@@ -4,13 +4,15 @@ import Link from "next/link";
 import { ThemeToggle } from "./theme-toggle";
 import { ToolSearch } from "./tool-search";
 import Image from "next/image";
+import { useTheme } from "next-themes";
 
 export function Navbar() {
+  const { resolvedTheme } = useTheme()
   return (
     <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-16 items-center gap-4 px-4">
         <Link href="/" className="flex shrink-0 items-center gap-2 font-semibold">
-          <Image src={"/assets/logo.webp"} alt="DevToolsKit" style={{ height: "20px", width: "auto" }} height={200} width={100} />
+          <Image src={resolvedTheme === "dark" ? "/assets/DevToolsKitLogoLight.webp" : "/assets/DevToolsKitLogo.webp"} alt="DevToolsKit" style={{ height: "20px", width: "auto" }} height={200} width={100} />
           {/* <Wrench className="h-5 w-5" />
           <span className="hidden sm:inline">{SITE_NAME}</span> */}
         </Link>

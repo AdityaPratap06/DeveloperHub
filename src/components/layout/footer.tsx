@@ -1,5 +1,5 @@
+"use client";
 import Link from "next/link";
-import { Wrench } from "lucide-react";
 import { SITE_NAME } from "@/lib/site";
 import { AdPlacement } from "@/components/ads/ad-placement";
 import {
@@ -7,6 +7,8 @@ import {
   getFeaturedTools,
   type ToolCategory,
 } from "@/lib/tools";
+import Image from "next/image";
+import { useTheme } from "next-themes";
 
 const footerLinks = [
   { href: "/blog", label: "Blog" },
@@ -21,7 +23,7 @@ const categories = Object.keys(CATEGORY_LABELS) as ToolCategory[];
 
 export function Footer() {
   const featuredTools = getFeaturedTools().slice(0, 6);
-
+  const { resolvedTheme  } = useTheme();
   return (
     <footer className="border-t bg-muted/30">
       <div className="container mx-auto px-4 py-12">
@@ -30,10 +32,9 @@ export function Footer() {
         <div className="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-5">
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center gap-2 font-semibold">
-              <Wrench className="h-5 w-5" />
-              {SITE_NAME}
+              <Image src={resolvedTheme  === "dark" ? "/assets/DevToolsKitLogoLight.webp" : "/assets/DevToolsKitLogo.webp"} alt="DevToolsKit" style={{ height: "20px", width: "auto" }} height={200} width={100} />
             </Link>
-            <p className="mt-3 max-w-sm text-sm text-muted-foreground leading-relaxed">
+            <p className="mt-5 max-w-sm text-sm text-muted-foreground leading-relaxed">
               Free, fast, and privacy-friendly developer tools that run entirely in your browser.
               Format JSON, decode JWTs, generate UUIDs, and more — no data ever sent to a server.
             </p>

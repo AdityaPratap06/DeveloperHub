@@ -68,24 +68,25 @@ export function HomepageSeoContent() {
       <section className="container mx-auto px-4 py-16">
         <div className="mx-auto max-w-3xl space-y-6 text-center">
           <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">
-            The Developer Toolkit Built for Speed & Privacy
+            Developer&apos;s Toolkit that is designed for both Performance & Privacy
           </h2>
           <div className="space-y-4 text-muted-foreground leading-relaxed text-left">
             <p>
-              {SITE_NAME} is a comprehensive collection of free online developer tools designed
-              for modern web development workflows. From formatting JSON and decoding JWT tokens
-              to generating UUIDs and testing regular expressions — every utility you need is
-              available instantly, with zero setup.
+              {SITE_NAME} — a free collection of online developer tools for modern web development workflows.
+              Whether it is formatting JSON or decoding a JWT token,
+              generating UUIDs or testing regular expressions — everything is at your disposal instantly without any setup.
             </p>
             <p>
-              Unlike traditional online tools that send your data to remote servers, every tool on{" "}
-              {SITE_NAME} runs entirely in your browser using JavaScript. This means your API keys,
-              tokens, passwords, and sensitive data never leave your device. It&apos;s faster,
-              safer, and works even when you&apos;re offline after the initial page load.
+              {SITE_NAME} works completely different from all of the online tools.
+              While traditional online tools transfer your data to remote backend servers,
+              every single tool on {SITE_NAME} runs locally within browser as a pure JavaScript.
+              This ensures your API keys, tokens, passwords, and sensitive data remain on your machine.
+              It is quicker, more secure and works offline after the first page load.
             </p>
             <p>
-              Whether you&apos;re a frontend developer debugging API responses, a backend engineer
-              validating JSON configs, or a DevOps professional building cron schedules —{" "}
+              Whether you&apos;re a frontend developer trying to debug API responses,
+              a backend engineer validating JSON configs,
+              or maybe just a DevOps professional restricting out the cron schedules,{" "}
               {SITE_NAME} has the tools you need, completely free with no account required.
             </p>
           </div>

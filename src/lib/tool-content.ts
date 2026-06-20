@@ -619,18 +619,18 @@ export function getToolSeoContent(toolId: string): ToolSeoContent | undefined {
 
 export const HOMEPAGE_FAQ: ToolFaq[] = [
   {
-    question: "Are DevToolkit developer tools really free?",
+    question: "Are DevToolkit developer tools actually FREE?",
     answer:
-      "Yes, all 20+ tools on DevToolkit are completely free with no usage limits, no signup required, and no hidden fees. We believe developer utilities should be accessible to everyone.",
+      "Yes, you can use all 20+ tools on DevToolkit for free, with unlimited usage without signup and any hidden fees. Our Vision is that all developer utilities should be available for everyone!",
   },
   {
-    question: "Is my data safe when using these tools?",
+    question: "Can I trust using these tools with my data?",
     answer:
-      "Absolutely. Every tool runs 100% in your browser using JavaScript. Your input data is never sent to our servers or any third party. This makes DevToolkit safe for sensitive data like API keys, JWT tokens, and passwords.",
+      "Absolutely. All the tools run entirely in your browser using JavaScript. None of your input data is sent to our servers or to third parties. This makes DevToolkit safe for sensitive data like API keys, JWT tokens, and passwords.",
   },
   {
     question: "Do I need to create an account?",
-    answer: "No account is needed. Just visit any tool page and start using it immediately. We store only your theme preference and recently used tools in your browser's local storage.",
+    answer: "No account is needed. Simply choose any tool page, and you can start using it. Your preference for a theme and an ordinary list of recently used tools are stored in the local storage of your browser.",
   },
   {
     question: "What tools are available on DevToolkit?",
@@ -640,12 +640,12 @@ export const HOMEPAGE_FAQ: ToolFaq[] = [
   {
     question: "Can I use DevToolkit on mobile?",
     answer:
-      "Yes, DevToolkit is fully responsive and works on phones, tablets, and desktops. All tools are optimized for touch and smaller screens.",
+      "DevToolkit is responsive, and works on phones, tablets, and desktops — YES. Every tool is designed for touch and small screens.",
   },
   {
     question: "How is DevToolkit different from other developer tool websites?",
     answer:
-      "DevToolkit prioritizes privacy (all client-side), speed (no server round-trips), and simplicity (no ads interrupting your workflow until you're ready). Every tool loads fast and works offline once the page is cached.",
+      "DevToolkit cares about privacy (everything is done on the client-side,), no server round-trips, and simplicity (no ads disrupting your workflow till you decide). All tools loads fast, and all works offline as soon as the page gets cached.",
   },
 ];
 
