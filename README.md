@@ -58,7 +58,7 @@ npm start
 
 | Variable | Description | Default |
 |----------|-------------|---------|
-| `NEXT_PUBLIC_SITE_URL` | Canonical site URL for SEO | `https://www.devtoolskit.in/` |
+| `NEXT_PUBLIC_SITE_URL` | Canonical site URL for SEO | `https://www.devtoolskit.in` |
 | `NEXT_PUBLIC_GA_MEASUREMENT_ID` | Google Analytics ID | (empty) |
 | `NEXT_PUBLIC_ADS_ENABLED` | Enable ad placement components | `false` |
 

@@ -8,7 +8,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 
 export function QrCodeGeneratorTool() {
-  const [text, setText] = useState("https://www.devtoolskit.in/");
+  const [text, setText] = useState("https://www.devtoolskit.in");
   const [size, setSize] = useState(256);
   const [dataUrl, setDataUrl] = useState("");
   const canvasRef = useRef<HTMLCanvasElement>(null);
