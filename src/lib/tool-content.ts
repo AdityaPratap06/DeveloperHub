@@ -18,17 +18,17 @@ export const TOOL_SEO_CONTENT: Record<string, ToolSeoContent> = {
     metaDescription:
       "Free online JSON formatter and beautifier. Format, minify, and prettify JSON instantly in your browser. Syntax highlighting, copy & download — no signup required.",
     overview: [
-      "Our free JSON Formatter helps developers format, beautify, and minify JSON data instantly. Whether you're debugging API responses, cleaning up configuration files, or preparing data for documentation, this tool makes working with JSON fast and effortless.",
+      "JSON formatter — Our free tool enables developers to quickly format, beautify and minify JSON data. From debugging API responses, formatting config files to preparing data for documentation and more, this tool is quick an easy way of handling JSON.",
       "Unlike desktop apps or CLI tools, DevToolkit runs entirely in your browser. Your JSON data never leaves your device — making it safe for sensitive API keys, user data, and production configs.",
       "Paste raw JSON, click Format to beautify with proper indentation, or Minify to compress for production. Copy the output or download as a .json file with one click.",
     ],
     features: [
       "Beautify JSON with 2-space indentation",
       "Minify JSON to a single line",
-      "Syntax highlighting for keys, strings, numbers, and booleans",
+      "Highlighting for JSON keys, strings, numbers and booleans",
       "Copy formatted output to clipboard",
       "Download JSON as a file",
-      "100% client-side — your data stays private",
+      "100 % browser-based — your data is encrypted.",
     ],
     howToSteps: [
       "Paste or type your JSON into the input field.",
