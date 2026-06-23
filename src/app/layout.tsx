@@ -44,7 +44,13 @@ export default function RootLayout({
         </ThemeProvider>
         <GoogleAnalytics />
       </body>
-      <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1025324546614550" strategy="afterInteractive" crossOrigin="anonymous" />
+      <Script
+        id="adsense-script"
+        async
+        strategy="afterInteractive"
+        crossOrigin="anonymous"
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1025324546614550"
+      />
     </html>
   );
 }

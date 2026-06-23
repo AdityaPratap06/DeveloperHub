@@ -8,14 +8,16 @@ import {
   Shield,
   Zap,
   Lock,
+  BookOpen,
 } from "lucide-react";
 import { ToolSearch } from "@/components/layout/tool-search";
 import { ToolCard } from "@/components/layout/tool-card";
+import { SectionHeader } from "@/components/layout/section-header";
 import { AdPlacement } from "@/components/ads/ad-placement";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import { useRecentTools } from "@/hooks/use-recent-tools";
 import { SITE_NAME } from "@/lib/site";
+import { cn } from "@/lib/utils";
 import {
   TOOLS,
   CATEGORY_LABELS,
@@ -27,9 +29,17 @@ import {
 } from "@/lib/tools";
 
 const trustBadges = [
-  { icon: Shield, text: "100% Private" },
-  { icon: Zap, text: "Instant Results" },
-  { icon: Lock, text: "No Signup" },
+  { icon: Shield, text: "100% Private", color: "text-emerald-600 dark:text-emerald-400" },
+  { icon: Zap, text: "Instant Results", color: "text-amber-600 dark:text-amber-400" },
+  { icon: Lock, text: "No Signup", color: "text-blue-600 dark:text-blue-400" },
+];
+
+const quickLinks = [
+  { href: "/tools/json-formatter", label: "JSON" },
+  { href: "/tools/jwt-decoder", label: "JWT" },
+  { href: "/tools/base64-encoder", label: "Base64" },
+  { href: "/tools/uuid-generator", label: "UUID" },
+  { href: "/tools/regex-tester", label: "Regex" },
 ];
 
 export function Homepage() {
@@ -51,51 +61,78 @@ export function Homepage() {
     <>
       {/* Hero */}
       <section className="relative overflow-hidden border-b">
-        <div className="hero-grid absolute inset-0 opacity-40" />
+        <div className="hero-grid absolute inset-0 opacity-50" />
         <div className="hero-glow absolute inset-0" />
-        <div className="container relative mx-auto px-4 py-20 md:py-28">
+
+        {/* Floating orbs */}
+        <div className="pointer-events-none absolute -left-20 top-20 h-64 w-64 rounded-full bg-primary/10 blur-3xl animate-float" />
+        <div className="pointer-events-none absolute -right-16 top-32 h-48 w-48 rounded-full bg-violet-500/10 blur-3xl animate-float-delayed" />
+
+        <div className="container relative mx-auto px-4 py-20 md:py-28 lg:py-16">
           <div className="mx-auto max-w-3xl text-center">
-            <Badge variant="secondary" className="mb-6 gap-1.5 px-4 py-1.5 text-sm">
+            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-sm font-medium text-primary shadow-glow-sm">
               <Sparkles className="h-3.5 w-3.5" />
-              20+ free developer tools — no signup required
-            </Badge>
-            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl bg-gradient-to-br from-foreground to-foreground/70 bg-clip-text">
-              Free Online Developer Tools
+              20+ free developer tools
+            </div>
+
+            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-[3.5rem] lg:leading-[1.1]">
+              <span className="gradient-text">Free Online</span>
+              <br />
+              <span className="gradient-text-brand">Developer Tools</span>
             </h1>
-            <p className="mt-5 text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+
+            <p className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
               Format JSON, decode JWTs, generate UUIDs, test regex, and more —
               all running instantly in your browser. Your data never leaves your device.
             </p>
 
-            <div className="mt-8 mx-auto max-w-lg">
+            <div className="mt-8 mx-auto max-w-xl">
               <ToolSearch
+                variant="hero"
                 placeholder="Search tools — JSON, JWT, Base64..."
                 onQueryChange={setSearchQuery}
                 onSelect={() => setSearchQuery("")}
               />
             </div>
 
-            <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
+            {/* Quick tool chips */}
+            <div className="mt-5 flex flex-wrap items-center justify-center gap-2">
+              <span className="text-xs text-muted-foreground mr-1">Popular:</span>
+              {quickLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="rounded-full border bg-background/60 px-3 py-1 text-xs font-medium text-muted-foreground backdrop-blur-sm transition-all hover:border-primary/40 hover:text-primary hover:shadow-sm"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
               {trustBadges.map((badge) => (
                 <div
                   key={badge.text}
-                  className="flex items-center gap-1.5 text-sm text-muted-foreground"
+                  className="flex items-center gap-2 rounded-full border bg-background/60 px-4 py-2 text-sm backdrop-blur-sm"
                 >
-                  <badge.icon className="h-4 w-4 text-primary" />
-                  {badge.text}
+                  <badge.icon className={cn("h-4 w-4", badge.color)} />
+                  <span className="text-muted-foreground">{badge.text}</span>
                 </div>
               ))}
             </div>
 
-            <div className="mt-8 flex flex-wrap justify-center gap-3">
-              <Button asChild size="lg">
+            <div className="mt-10 flex flex-wrap justify-center gap-3">
+              <Button asChild size="lg" className="h-11 px-8">
                 <Link href="#featured">
                   Browse Tools
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </Button>
-              <Button variant="outline" size="lg" asChild>
-                <Link href="/tools/json-formatter">Try JSON Formatter</Link>
+              <Button variant="outline" size="lg" className="h-11 px-8 bg-background/60 backdrop-blur-sm" asChild>
+                <Link href="/blog">
+                  <BookOpen className="h-4 w-4" />
+                  Read Guides
+                </Link>
               </Button>
             </div>
           </div>
@@ -104,13 +141,14 @@ export function Homepage() {
 
       <AdPlacement type="hero" />
 
-      <div className="container mx-auto px-4 py-12 space-y-16">
+      <div className="container mx-auto px-4 py-14 space-y-20">
         {searchQuery ? (
           <section>
-            <h2 className="text-2xl font-bold mb-6">
-              Search Results ({filteredTools.length})
-            </h2>
-            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <SectionHeader
+              title={`Search Results (${filteredTools.length})`}
+              description="Tools matching your search query"
+            />
+            <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {filteredTools.map((tool) => (
                 <ToolCard key={tool.id} tool={tool} />
               ))}
@@ -119,21 +157,11 @@ export function Homepage() {
         ) : (
           <>
             <section id="featured">
-              <div className="flex items-center justify-between mb-6">
-                <div>
-                  <h2 className="text-2xl font-bold">Featured Tools</h2>
-                  <p className="text-sm text-muted-foreground mt-1">
-                    Most popular tools on {SITE_NAME}
-                  </p>
-                </div>
-                <Button variant="ghost" size="sm" asChild>
-                  <Link href="#all-tools">
-                    View all
-                    <ArrowRight className="h-4 w-4" />
-                  </Link>
-                </Button>
-              </div>
-              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              <SectionHeader
+                title="Featured Tools"
+                description={`The most popular utilities on ${SITE_NAME}`}
+              />
+              <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
                 {getFeaturedTools().map((tool) => (
                   <ToolCard key={tool.id} tool={tool} featured />
                 ))}
@@ -142,8 +170,8 @@ export function Homepage() {
 
             {recentTools.length > 0 && (
               <section>
-                <h2 className="text-2xl font-bold mb-6">Recently Used</h2>
-                <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                <SectionHeader title="Recently Used" description="Pick up where you left off" />
+                <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
                   {recentTools.map((tool) => (
                     <ToolCard key={tool.id} tool={tool} />
                   ))}
@@ -152,27 +180,31 @@ export function Homepage() {
             )}
 
             <section id="all-tools">
-              <h2 className="text-2xl font-bold mb-2">All Tools by Category</h2>
-              <p className="text-muted-foreground mb-8">
-                Browse our complete collection of free developer utilities
-              </p>
-              <div className="space-y-12">
+              <SectionHeader
+                title="All Tools by Category"
+                description="Browse our complete collection of free developer utilities"
+              />
+              <div className="space-y-14">
                 {categories.map((category) => {
                   const tools = getToolsByCategory(category);
                   return (
                     <div key={category}>
-                      <div className="flex items-center justify-between mb-4">
-                        <h3 className="text-lg font-semibold">
+                      <div className="flex items-center justify-between mb-5 pb-3 border-b border-border/60">
+                        <h3 className="text-lg font-semibold flex items-center gap-2">
+                          <span className="h-2 w-2 rounded-full bg-primary" />
                           {CATEGORY_LABELS[category]}
+                          <span className="text-sm font-normal text-muted-foreground">
+                            ({tools.length})
+                          </span>
                         </h3>
                         <Link
                           href={`/categories/${category}`}
-                          className="text-sm text-muted-foreground hover:text-primary flex items-center gap-1"
+                          className="text-sm text-muted-foreground hover:text-primary flex items-center gap-1 transition-colors"
                         >
                           View all <ArrowRight className="h-3 w-3" />
                         </Link>
                       </div>
-                      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                      <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
                         {tools.map((tool) => (
                           <ToolCard key={tool.id} tool={tool} />
                         ))}

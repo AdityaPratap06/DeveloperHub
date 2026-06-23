@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { CATEGORY_LABELS, type Tool } from "@/lib/tools";
+import { CATEGORY_STYLES } from "@/lib/category-styles";
 import { cn } from "@/lib/utils";
 
 interface ToolCardProps {
@@ -12,33 +12,47 @@ interface ToolCardProps {
 
 export function ToolCard({ tool, featured }: ToolCardProps) {
   const Icon = tool.icon;
+  const styles = CATEGORY_STYLES[tool.category];
 
   return (
     <Link href={tool.href} className="group block h-full">
       <Card
         className={cn(
-          "h-full transition-all duration-200 hover:border-primary/40 hover:shadow-md hover:-translate-y-0.5",
-          featured && "border-primary/20 bg-gradient-to-br from-card to-primary/5"
+          "card-shine h-full overflow-hidden transition-all duration-300",
+          "hover:border-primary/30 hover:shadow-card-hover hover:-translate-y-1",
+          featured && cn("border-primary/25 bg-gradient-to-br to-card", styles.gradient)
         )}
       >
         <CardHeader className="pb-3">
           <div className="flex items-start justify-between">
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 ring-1 ring-primary/10 group-hover:bg-primary/15 transition-colors">
-              <Icon className="h-5 w-5 text-primary" />
+            <div
+              className={cn(
+                "flex h-11 w-11 items-center justify-center rounded-xl ring-1 transition-all duration-300 group-hover:scale-105 group-hover:shadow-glow-sm",
+                styles.icon
+              )}
+            >
+              <Icon className="h-5 w-5" />
             </div>
-            <ArrowRight className="h-4 w-4 text-muted-foreground opacity-0 -translate-x-1 transition-all group-hover:opacity-100 group-hover:translate-x-0" />
+            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-muted/80 opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:bg-primary group-hover:text-primary-foreground">
+              <ArrowRight className="h-4 w-4" />
+            </div>
           </div>
-          <CardTitle className="text-base group-hover:text-primary transition-colors">
+          <CardTitle className="text-base font-semibold group-hover:text-primary transition-colors duration-200">
             {tool.name}
           </CardTitle>
-          <CardDescription className="line-clamp-2 leading-relaxed">
+          <CardDescription className="line-clamp-2 leading-relaxed text-sm">
             {tool.description}
           </CardDescription>
         </CardHeader>
         <CardContent className="pt-0">
-          <Badge variant="outline" className="text-xs font-normal">
+          <span
+            className={cn(
+              "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-medium",
+              styles.badge
+            )}
+          >
             {CATEGORY_LABELS[tool.category]}
-          </Badge>
+          </span>
         </CardContent>
       </Card>
     </Link>

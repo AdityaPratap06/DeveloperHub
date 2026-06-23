@@ -13,6 +13,7 @@ interface ToolSearchProps {
   onSelect?: () => void;
   onQueryChange?: (query: string) => void;
   autoFocus?: boolean;
+  variant?: "default" | "hero";
 }
 
 export function ToolSearch({
@@ -21,6 +22,7 @@ export function ToolSearch({
   onSelect,
   onQueryChange,
   autoFocus,
+  variant = "default",
 }: ToolSearchProps) {
   const [query, setQuery] = useState("");
   const [open, setOpen] = useState(false);
@@ -37,10 +39,17 @@ export function ToolSearch({
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+  const isHero = variant === "hero";
+
   return (
     <div ref={containerRef} className={cn("relative w-full", className)}>
       <div className="relative">
-        <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+        <Search
+          className={cn(
+            "absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground",
+            isHero && "h-5 w-5 text-primary/60"
+          )}
+        />
         <Input
           type="text"
           placeholder={placeholder}
@@ -52,16 +61,20 @@ export function ToolSearch({
             setOpen(true);
           }}
           onFocus={() => setOpen(true)}
-          className="pl-9 pr-9"
+          className={cn(
+            "pl-10 pr-10",
+            isHero && "h-14 rounded-2xl border-primary/20 bg-background/80 pl-12 text-base shadow-lg shadow-primary/5 backdrop-blur-sm focus-visible:shadow-glow-sm"
+          )}
         />
         {query && (
           <button
             type="button"
             onClick={() => {
               setQuery("");
+              onQueryChange?.("");
               setOpen(false);
             }}
-            className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
+            className="absolute right-4 top-1/2 -translate-y-1/2 rounded-full p-0.5 text-muted-foreground hover:bg-muted hover:text-foreground transition-colors"
             aria-label="Clear search"
           >
             <X className="h-4 w-4" />
@@ -70,11 +83,11 @@ export function ToolSearch({
       </div>
 
       {open && query && (
-        <div className="absolute z-50 mt-1 w-full rounded-lg border bg-popover shadow-lg">
+        <div className="absolute z-50 mt-2 w-full overflow-hidden rounded-xl border bg-popover/95 shadow-xl backdrop-blur-xl">
           {results.length === 0 ? (
             <p className="p-4 text-sm text-muted-foreground">No tools found.</p>
           ) : (
-            <ul className="max-h-64 overflow-auto py-1">
+            <ul className="max-h-72 overflow-auto py-1.5">
               {results.map((tool) => (
                 <li key={tool.id}>
                   <Link
@@ -82,13 +95,16 @@ export function ToolSearch({
                     onClick={() => {
                       setOpen(false);
                       setQuery("");
+                      onQueryChange?.("");
                       onSelect?.();
                     }}
-                    className="flex items-start gap-3 px-4 py-2.5 hover:bg-accent"
+                    className="flex items-start gap-3 px-4 py-3 hover:bg-accent/80 transition-colors"
                   >
-                    <tool.icon className="mt-0.5 h-4 w-4 shrink-0 text-muted-foreground" />
-                    <div>
-                      <p className="text-sm font-medium text-left">{tool.name}</p>
+                    <div className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary/10">
+                      <tool.icon className="h-4 w-4 text-primary" />
+                    </div>
+                    <div className="min-w-0 text-left">
+                      <p className="text-sm font-medium">{tool.name}</p>
                       <p className="text-xs text-muted-foreground line-clamp-1">
                         {tool.description}
                       </p>
