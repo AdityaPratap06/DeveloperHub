@@ -39,4 +39,14 @@ export const CATEGORY_STYLES: Record<
     badge: "border-indigo-200 bg-indigo-50 text-indigo-700 dark:border-indigo-800 dark:bg-indigo-950/50 dark:text-indigo-300",
     gradient: "from-indigo-500/10 to-blue-500/5",
   },
+  seo: {
+    icon: "bg-orange-500/10 text-orange-600 ring-orange-500/20 dark:text-orange-400",
+    badge: "border-orange-200 bg-orange-50 text-orange-700 dark:border-orange-800 dark:bg-orange-950/50 dark:text-orange-300",
+    gradient: "from-orange-500/10 to-amber-500/5",
+  },
+  web: {
+    icon: "bg-sky-500/10 text-sky-600 ring-sky-500/20 dark:text-sky-400",
+    badge: "border-sky-200 bg-sky-50 text-sky-700 dark:border-sky-800 dark:bg-sky-950/50 dark:text-sky-300",
+    gradient: "from-sky-500/10 to-blue-500/5",
+  },
 };

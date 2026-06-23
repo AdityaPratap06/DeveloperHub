@@ -29,7 +29,7 @@ export function SectionHeader({
       >
         <span className="h-px w-8 bg-gradient-to-r from-brand to-brand/0" />
         <span className="text-xs font-semibold uppercase tracking-widest text-brand">
-          DevToolkit
+          DevToolsKit
         </span>
         {align === "left" && (
           <span className="h-px flex-1 max-w-16 bg-gradient-to-r from-brand/40 to-transparent" />

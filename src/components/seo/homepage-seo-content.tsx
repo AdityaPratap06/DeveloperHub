@@ -8,7 +8,7 @@ import { HOMEPAGE_FAQ } from "@/lib/tool-content";
 import { CATEGORY_LABELS, TOOLS, type ToolCategory } from "@/lib/tools";
 
 const stats = [
-  { icon: Wrench, label: "20+", desc: "Developer Tools" },
+  { icon: Wrench, label: "40+", desc: "Developer Tools" },
   { icon: Shield, label: "100%", desc: "Private & Secure" },
   { icon: Zap, label: "0ms", desc: "Server Latency" },
   { icon: Globe, label: "Free", desc: "Forever" },

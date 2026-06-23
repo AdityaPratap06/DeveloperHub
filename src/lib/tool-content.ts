@@ -613,15 +613,17 @@ export const TOOL_SEO_CONTENT: Record<string, ToolSeoContent> = {
   },
 };
 
+import { PREMIUM_TOOL_SEO_CONTENT } from "./premium-tool-content";
+
 export function getToolSeoContent(toolId: string): ToolSeoContent | undefined {
-  return TOOL_SEO_CONTENT[toolId];
+  return TOOL_SEO_CONTENT[toolId] ?? PREMIUM_TOOL_SEO_CONTENT[toolId];
 }
 
 export const HOMEPAGE_FAQ: ToolFaq[] = [
   {
     question: "Are DevToolsKit developer tools actually FREE?",
     answer:
-      "Yes, you can use all 20+ tools on DevToolsKit for free, with unlimited usage without signup and any hidden fees. Our Vision is that all developer utilities should be available for everyone!",
+      "Yes, you can use all 40+ tools on DevToolsKit for free, with unlimited usage without signup and any hidden fees. Our Vision is that all developer utilities should be available for everyone!",
   },
   {
     question: "Can I trust using these tools with my data?",
@@ -635,7 +637,7 @@ export const HOMEPAGE_FAQ: ToolFaq[] = [
   {
     question: "What tools are available on DevToolsKit?",
     answer:
-      "DevToolsKit offers 20 developer tools including JSON Formatter, JSON Validator, JWT Decoder, Base64 Encoder, URL Encoder, UUID Generator, Unix Timestamp Converter, Regex Tester, Password Generator, Hash Generator, SQL/HTML/CSS/JS Formatters, Cron Generator, Color Converter, Lorem Ipsum Generator, Text Diff Checker, Case Converter, and QR Code Generator.",
+      "DevToolsKit offers 40+ developer tools including JSON Formatter, JSON Compare, JWT Decoder, SEO meta tag generators, Markdown editor, UTM builder, password checker, schema markup generator, HTTP status lookup, and many more — all free and browser-based.",
   },
   {
     question: "Can I use DevToolsKit on mobile?",
@@ -654,11 +656,11 @@ export const CATEGORY_SEO: Record<
   { title: string; description: string; overview: string[] }
 > = {
   data: {
-    title: "Data & JSON Tools",
+    title: "JSON Tools",
     description:
-      "Free online JSON tools — format, validate, and beautify JSON data instantly in your browser. No signup, completely private.",
+      "Free online JSON tools — format, validate, compare, and convert JSON to CSV instantly in your browser. No signup, completely private.",
     overview: [
-      "Work with JSON data faster using our free Data & JSON tools. Format messy API responses, validate syntax before deployment, and debug configuration files — all without leaving your browser.",
+      "Work with JSON data faster using our free JSON tools. Format messy API responses, compare configs side-by-side, convert to CSV, and validate syntax — all without leaving your browser.",
       "JSON is the lingua franca of modern APIs and configuration. These tools help you handle it efficiently while keeping your data completely private.",
     ],
   },
@@ -682,9 +684,9 @@ export const CATEGORY_SEO: Record<
   text: {
     title: "Text Tools",
     description:
-      "Free text tools online — regex tester, text diff checker, and case converter. Debug and transform text instantly in your browser.",
+      "Free text tools online — word counter, keyword density, text compare, regex tester, and Markdown editor. Debug and transform text instantly in your browser.",
     overview: [
-      "Test regular expressions, compare text diffs, and convert naming conventions with our Text tools. Perfect for everyday development tasks that don't need a full IDE.",
+      "Count words, analyze keyword density, compare text side-by-side, and preview Markdown with our Text tools. Perfect for writers, SEO professionals, and developers.",
     ],
   },
   formatters: {
@@ -706,9 +708,26 @@ export const CATEGORY_SEO: Record<
   utilities: {
     title: "Developer Utilities",
     description:
-      "Free developer utilities — Unix timestamp converter, cron generator, and color converter. Handy tools for everyday development.",
+      "Free developer utilities — HTTP status codes, MIME types, Unix timestamp converter, cron generator, and color converter.",
     overview: [
-      "Convert Unix timestamps, build cron expressions, and transform color formats with our Utility tools. Small tools that save big amounts of time.",
+      "Look up HTTP status codes and MIME types, convert Unix timestamps, build cron expressions, and transform color formats with our Developer Utilities.",
+    ],
+  },
+  seo: {
+    title: "SEO Tools",
+    description:
+      "Free SEO tools online — meta tag generator, Open Graph tags, Twitter Cards, robots.txt, XML sitemap, slug generator, and schema markup.",
+    overview: [
+      "Optimize your website for search engines and social sharing with our SEO tools. Generate meta tags, structured data, sitemaps, and URL slugs instantly.",
+      "Every tool runs in your browser — no data leaves your device. Perfect for developers, marketers, and content creators.",
+    ],
+  },
+  web: {
+    title: "Web Tools",
+    description:
+      "Free web developer tools — URL parser, UTM link builder, HTML to Markdown converter, and more. Parse URLs and build tracked links instantly.",
+    overview: [
+      "Parse URLs into components, build UTM campaign links, and convert HTML to Markdown with our Web tools. Essential utilities for web development and marketing.",
     ],
   },
 };

@@ -101,7 +101,7 @@ export function Footer() {
         </div>
 
         <div className="mt-12 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-border/60 pt-8 text-sm text-muted-foreground">
-          <p>© {new Date().getFullYear()} DevToolkit. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} DevToolsKit. All rights reserved.</p>
           <p className="flex items-center gap-1.5 text-xs">
             <span className="inline-block h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse-soft" />
             All tools run client-side — your data stays on your device

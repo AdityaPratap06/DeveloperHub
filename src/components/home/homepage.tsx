@@ -72,7 +72,7 @@ export function Homepage() {
           <div className="mx-auto max-w-3xl text-center">
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-sm font-medium text-primary shadow-glow-sm">
               <Sparkles className="h-3.5 w-3.5" />
-              20+ free developer tools
+              40+ free developer tools
             </div>
 
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-[3.5rem] lg:leading-[1.1]">

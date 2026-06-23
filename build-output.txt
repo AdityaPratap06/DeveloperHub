@@ -1,0 +1,125 @@
+﻿
+> devtoolskit@1.0.0 build
+> next build
+
+   Γû▓ Next.js 15.5.19
+   - Environments: .env
+
+   Creating an optimized production build ...
+ Γ£ô Compiled successfully in 39.9s
+   Linting and checking validity of types ...
+
+./src/components/blog/blog-article.tsx
+2:10  Warning: 'ArrowRight' is defined but never used.  @typescript-eslint/no-unused-vars
+
+./src/components/tools/http-status-codes.tsx
+8:10  Warning: 'HTTP_STATUS_CODES' is defined but never used.  @typescript-eslint/no-unused-vars
+
+./src/components/tools/json-compare.tsx
+4:10  Warning: 'Button' is defined but never used.  @typescript-eslint/no-unused-vars
+
+./src/components/tools/keyword-density.tsx
+5:10  Warning: 'Label' is defined but never used.  @typescript-eslint/no-unused-vars
+
+./src/components/tools/mime-types.tsx
+7:10  Warning: 'MIME_TYPES' is defined but never used.  @typescript-eslint/no-unused-vars
+
+./src/components/tools/robots-generator.tsx
+7:10  Warning: 'Button' is defined but never used.  @typescript-eslint/no-unused-vars
+
+./src/components/tools/sitemap-generator.tsx
+4:10  Warning: 'Button' is defined but never used.  @typescript-eslint/no-unused-vars
+5:10  Warning: 'Input' is defined but never used.  @typescript-eslint/no-unused-vars
+
+./src/components/tools/word-counter.tsx
+5:10  Warning: 'Label' is defined but never used.  @typescript-eslint/no-unused-vars
+
+info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/app/api-reference/config/eslint#disabling-rules
+   Collecting page data ...
+node.exe :  ΓÜá Using edge runtime on a page currently disables static generation for that page
+At C:\Program Files\nodejs\npm.ps1:29 char:3
++   & $NODE_EXE $NPM_CLI_JS $args
++   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ( ΓÜá Using edge...n for that page:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+   Generating static pages (0/72) ...
+   Generating static pages (18/72) 
+   Generating static pages (36/72) 
+   Generating static pages (54/72) 
+ Γ£ô Generating static pages (72/72)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                                 Size  First Load JS
+Γöî Γùï /                                    5.14 kB         129 kB
+Γö£ Γùï /_not-found                             1 kB         103 kB
+Γö£ Γùï /about                                 148 B         102 kB
+Γö£ Γùï /blog                                1.13 kB         115 kB
+Γö£ ΓùÅ /blog/[slug]                         1.13 kB         115 kB
+Γö£   Γö£ /blog/what-is-json
+Γö£   Γö£ /blog/what-is-jwt
+Γö£   Γö£ /blog/what-is-base64
+Γö£   Γöö [+7 more paths]
+Γö£ ΓùÅ /categories/[category]               1.13 kB         115 kB
+Γö£   Γö£ /categories/data
+Γö£   Γö£ /categories/encoding
+Γö£   Γö£ /categories/security
+Γö£   Γöö [+6 more paths]
+Γö£ Γùï /contact                               148 B         102 kB
+Γö£ ╞Æ /opengraph-image                       148 B         102 kB
+Γö£ Γùï /privacy                               148 B         102 kB
+Γö£ Γùï /robots.txt                            148 B         102 kB
+Γö£ Γùï /site-map                              166 B         106 kB
+Γö£ Γùï /sitemap.xml                           148 B         102 kB
+Γö£ Γùï /terms                                 148 B         102 kB
+Γö£ Γùï /tools/base64-encoder                4.14 kB         136 kB
+Γö£ Γùï /tools/case-converter                1.73 kB         128 kB
+Γö£ Γùï /tools/color-converter               2.56 kB         129 kB
+Γö£ Γùï /tools/cron-generator                7.91 kB         163 kB
+Γö£ Γùï /tools/css-formatter                 1.38 kB         236 kB
+Γö£ Γùï /tools/csv-to-json                   3.18 kB         130 kB
+Γö£ Γùï /tools/hash-generator                26.1 kB         153 kB
+Γö£ Γùï /tools/html-formatter                1.38 kB         236 kB
+Γö£ Γùï /tools/html-to-markdown              6.28 kB         133 kB
+Γö£ Γùï /tools/http-status-codes             3.12 kB         130 kB
+Γö£ Γùï /tools/javascript-formatter          1.38 kB         236 kB
+Γö£ Γùï /tools/json-compare                  8.99 kB         138 kB
+Γö£ Γùï /tools/json-formatter                 2.6 kB         129 kB
+Γö£ Γùï /tools/json-to-csv                    3.2 kB         130 kB
+Γö£ Γùï /tools/json-validator                4.07 kB         128 kB
+Γö£ Γùï /tools/jwt-decoder                   2.38 kB         129 kB
+Γö£ Γùï /tools/keyword-density               7.25 kB         134 kB
+Γö£ Γùï /tools/lorem-ipsum                   4.99 kB         137 kB
+Γö£ Γùï /tools/markdown-preview              16.6 kB         148 kB
+Γö£ Γùï /tools/meta-tag-generator            4.34 kB         131 kB
+Γö£ Γùï /tools/mime-types                    2.79 kB         129 kB
+Γö£ Γùï /tools/open-graph-generator          4.48 kB         131 kB
+Γö£ Γùï /tools/password-checker                 5 kB         129 kB
+Γö£ Γùï /tools/password-generator            6.86 kB         138 kB
+Γö£ Γùï /tools/qr-code-generator             13.6 kB         137 kB
+Γö£ Γùï /tools/regex-tester                  5.97 kB         133 kB
+Γö£ Γùï /tools/robots-generator              4.23 kB         131 kB
+Γö£ Γùï /tools/schema-generator              4.28 kB         159 kB
+Γö£ Γùï /tools/sitemap-generator             4.11 kB         159 kB
+Γö£ Γùï /tools/slug-generator                3.73 kB         159 kB
+Γö£ Γùï /tools/sql-formatter                 1.38 kB         236 kB
+Γö£ Γùï /tools/text-compare                  3.57 kB         138 kB
+Γö£ Γùï /tools/text-diff                     1.47 kB         131 kB
+Γö£ Γùï /tools/twitter-card-generator         4.1 kB         159 kB
+Γö£ Γùï /tools/unix-timestamp                2.33 kB         129 kB
+Γö£ Γùï /tools/url-encoder                   4.12 kB         136 kB
+Γö£ Γùï /tools/url-parser                    4.36 kB         131 kB
+Γö£ Γùï /tools/utm-builder                   4.28 kB         131 kB
+Γö£ Γùï /tools/uuid-generator                2.95 kB         130 kB
+Γöö Γùï /tools/word-counter                  5.76 kB         130 kB
++ First Load JS shared by all             102 kB
+  Γö£ chunks/1255-b8cf77ab14370e57.js        46 kB
+  Γö£ chunks/4bd1b696-100b9d70ed4e49c1.js  54.2 kB
+  Γöö other shared chunks (total)          2.01 kB
+
+
+Γùï  (Static)   prerendered as static content
+ΓùÅ  (SSG)      prerendered as static HTML (uses generateStaticParams)
+╞Æ  (Dynamic)  server-rendered on demand
+

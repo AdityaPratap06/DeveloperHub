@@ -47,7 +47,7 @@ export default function Image() {
           </span>
         </div>
         <p style={{ fontSize: "28px", color: "#a1a1aa", margin: 0 }}>
-          20+ Free Developer Tools — Fast, Private, Browser-Based
+          40+ Free Developer Tools — Fast, Private, Browser-Based
         </p>
         <div
           style={{
