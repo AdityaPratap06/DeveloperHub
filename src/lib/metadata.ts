@@ -60,15 +60,16 @@ export function createMetadata({
 
 export function createToolMetadata(
   toolId: string,
-  title: string,
+  name: string,
   fallbackDescription: string,
   keywords: string[]
 ): Metadata {
   const seoContent = getToolSeoContent(toolId);
+  const title = seoContent?.title?.length ? seoContent?.title : `${name} — Free Online Tool`;
   const description = seoContent?.metaDescription ?? fallbackDescription;
 
   return createMetadata({
-    title: `${title} — Free Online Tool`,
+    title,
     description,
     path: `/tools/${toolId}`,
     keywords,

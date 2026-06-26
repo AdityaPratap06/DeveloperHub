@@ -38,7 +38,16 @@ export function ToolSeoContent({ toolId }: ToolSeoContentProps) {
             </p>
           ))}
         </section>
-
+        {content.additional.map((data, i) => (
+          <section key={i} className="prose prose-zinc dark:prose-invert max-w-none">
+            <h2 className="text-xl font-semibold tracking-tight not-prose">
+              {data.title}
+            </h2>
+            <p key={i} className="text-muted-foreground leading-relaxed">
+              {data.description}
+            </p>
+          </section>
+        ))}
         <div className="grid gap-8 lg:grid-cols-2">
           {/* Features */}
           <section className="rounded-xl border bg-card p-6">
