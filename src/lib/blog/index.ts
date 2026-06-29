@@ -11,6 +11,7 @@
 //   onlineUuidGenerator,
 // } from "./bottom-funnel";
 import { bestJsonFormatter, freeJwtDecoder, onlineUuidGenerator } from "./posts/bottom-funnel";
+import { jsonFormatterOnline } from "./posts/json-formatter-online";
 import { howToFormatJson, howToGeneratePasswords, howToValidateJwt } from "./posts/middle-funnel";
 import { whatIsBase64, whatIsJwt, whatIsSha256 } from "./posts/top-funnel";
 import { whatIsJson } from "./posts/what-is-json";
@@ -18,6 +19,7 @@ import type { BlogFunnel, BlogPost } from "./types";
 
 export const BLOG_POSTS: BlogPost[] = [
   // Top funnel — Educational
+  jsonFormatterOnline,
   whatIsJson,
   whatIsJwt,
   whatIsBase64,
